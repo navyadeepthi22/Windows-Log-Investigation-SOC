@@ -22,11 +22,17 @@ The system was running Windows Home edition, which does not support advanced aud
 - Event ID 4634: Multiple session terminations
 - Event ID 4624: Successful login after abnormal activity
 - Event ID 4672: Privileged access assigned
+### Observed Events
 
+The following screenshot shows repeated Windows Security Event logs related to abnormal authentication behavior.
+
+![Windows Security Event Logs](images/security_event_logs.png)
 ### Timeline Analysis
 - Activity occurred outside business hours
 - Multiple session terminations in a short time window
+The timeline below highlights repeated session terminations within a short time window.
 
+![Authentication Timeline](images/security_event_logs2.png)
 ## Analysis
 Security logs were reviewed to determine the nature of the alert. Repeated Event ID 4634 entries for the same user indicate abnormal authentication behavior that can be associated with failed login attempts or abrupt session termination.
 
@@ -47,3 +53,4 @@ True Positive – Escalated to Tier-2 SOC
 
 ## Purpose
 This project demonstrates practical Windows log investigation skills, event correlation, and SOC analyst decision-making.
+
